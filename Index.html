@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="as">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>পঢ়া Hub — অসমৰ ছাত্ৰ-ছাত্ৰীৰ বাবে আধুনিক শিক্ষা মঞ্চ</title>
+<meta name="description" content="পঢ়া Hub — অসমীয়া ছাত্ৰ-ছাত্ৰীৰ বাবে এক আধুনিক, ইন্টাৰেক্টিভ আৰু গেমিফাইড শিক্ষামূলক প্ল্যাটফৰ্ম।" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;700;900&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-theme="dark">
+
+<!-- Cursor blob -->
+<div class="cursor-blob" id="cursorBlob"></div>
+
+<!-- Loader -->
+<div class="loader" id="loader">
+  <div class="loader-ring"></div>
+  <div class="loader-text">পঢ়া Hub</div>
+</div>
+
+<!-- Navbar -->
+<header class="nav glass">
+  <a href="#" class="logo">
+    <span class="logo-mark">প</span>
+    <span class="logo-text">পঢ়া <em>Hub</em></span>
+  </a>
+  <nav class="nav-links">
+    <a href="#home">ঘৰ</a>
+    <a href="#courses">পাঠ্যক্ৰম</a>
+    <a href="#features">বৈশিষ্ট্য</a>
+    <a href="#leaderboard">লিডাৰবৰ্ড</a>
+    <a href="#about">আমাৰ বিষয়ে</a>
+  </nav>
+  <div class="nav-actions">
+    <button class="theme-toggle" id="themeToggle" aria-label="থিম সলনি কৰক">🌙</button>
+    <a href="pages/login.html" class="btn btn-ghost">প্ৰৱেশ</a>
+    <a href="pages/signup.html" class="btn btn-primary">বিনামূলীয়া পঞ্জীয়ন</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="মেনু">☰</button>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+  <div class="hero-inner">
+    <div class="badge" data-aos="fade-down">✨ অসমৰ ছাত্ৰ-ছাত্ৰীৰ বাবে নিৰ্মিত</div>
+    <h1 class="hero-title">
+      <span class="line">পঢ়াশুনাক কৰক</span>
+      <span class="line gradient-text">আনন্দদায়ক আৰু আধুনিক</span>
+    </h1>
+    <p class="hero-sub">
+      Class 6 ৰ পৰা HSLC, HS, আৰু প্ৰতিযোগিতামূলক পৰীক্ষালৈ — সকলো অসমীয়া ভাষাত। 
+      গেমিফাইড শিক্ষা, লাইভ কুইজ, AI সহায়ক আৰু আকৰ্ষণীয় ইন্টাৰফেছ।
+    </p>
+    <div class="hero-cta">
+      <a href="pages/courses.html" class="btn btn-primary btn-lg">এতিয়াই আৰম্ভ কৰক →</a>
+      <a href="#features" class="btn btn-ghost btn-lg">▶ ডেমো চাওক</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><b data-count="25000">0</b><span>সক্ৰিয় ছাত্ৰ</span></div>
+      <div class="stat"><b data-count="500">0</b><span>ভিডিঅ' পাঠ</span></div>
+      <div class="stat"><b data-count="10000">0</b><span>কুইজ প্ৰশ্ন</span></div>
+      <div class="stat"><b data-count="98">0</b><span>% সন্তুষ্টি</span></div>
+    </div>
+  </div>
+  <div class="scroll-hint">scroll ↓</div>
+</section>
+
+<!-- Marquee -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>📚 অসমীয়া</span><span>🧮 গণিত</span><span>🔬 বিজ্ঞান</span><span>🌍 সমাজ বিজ্ঞান</span>
+    <span>💻 কম্পিউটাৰ</span><span>📐 জ্যামিতি</span><span>🧪 ৰসায়ন</span><span>⚛ পদাৰ্থ বিজ্ঞান</span>
+    <span>🌱 জীৱ বিজ্ঞান</span><span>🗣 ইংৰাজী</span><span>🕉 সংস্কৃত</span><span>🎯 SEBA</span>
+    <span>📚 অসমীয়া</span><span>🧮 গণিত</span><span>🔬 বিজ্ঞান</span><span>🌍 সমাজ বিজ্ঞান</span>
+  </div>
+</div>
+
+<!-- Features -->
+<section class="section" id="features">
+  <div class="section-head" data-aos="fade-up">
+    <span class="eyebrow">বৈশিষ্ট্য</span>
+    <h2>কিয় <span class="gradient-text">পঢ়া Hub</span>?</h2>
+    <p>আধুনিক প্ৰযুক্তি আৰু অসমীয়া সংস্কৃতিৰ সংমিশ্ৰণত নিৰ্মিত।</p>
+  </div>
+  <div class="features-grid">
+    <article class="feature-card" data-aos="fade-up" data-aos-delay="0">
+      <div class="icon">🎮</div><h3>গেমিফাইড শিক্ষা</h3>
+      <p>XP, লেভেল, বেজ আৰু দৈনিক ষ্ট্ৰিকেৰে পঢ়া হ’ব মজাৰ।</p>
+    </article>
+    <article class="feature-card" data-aos="fade-up" data-aos-delay="80">
+      <div class="icon">🤖</div><h3>AI অধ্যয়ন সহায়ক</h3>
+      <p>অসমীয়াতে প্ৰশ্ন সুধক, তৎক্ষণাত সমাধান পাওক।</p>
+    </article>
+    <article class="feature-card" data-aos="fade-up" data-aos-delay="160">
+      <div class="icon">📊</div><h3>প্ৰগতি ট্ৰেকিং</h3>
+      <p>সুন্দৰ চাৰ্ট আৰু এনালিটিক্সৰ সৈতে নিজৰ উন্নতি চাওক।</p>
+    </article>
+    <article class="feature-card" data-aos="fade-up" data-aos-delay="240">
+      <div class="icon">🏆</div><h3>লাইভ লিডাৰবৰ্ড</h3>
+      <p>অসমৰ আন ছাত্ৰ-ছাত্ৰীৰ সৈতে স্বাস্থ্যকৰ প্ৰতিযোগিতা।</p>
+    </article>
+    <article class="feature-card" data-aos="fade-up" data-aos-delay="320">
+      <div class="icon">📱</div><h3>মোবাইল-ফাষ্ট</h3>
+      <p>যিকোনো ডিভাইচত মসৃণ আৰু দ্ৰুত অভিজ্ঞতা।</p>
+    </article>
+    <article class="feature-card" data-aos="fade-up" data-aos-delay="400">
+      <div class="icon">🎓</div><h3>SEBA + AHSEC</h3>
+      <p>অসম বৰ্ড পাঠ্যক্ৰম অনুসৰি সম্পূৰ্ণ সমলয়।</p>
+    </article>
+  </div>
+</section>
+
+<!-- Courses -->
+<section class="section alt" id="courses">
+  <div class="section-head" data-aos="fade-up">
+    <span class="eyebrow">পাঠ্যক্ৰম</span>
+    <h2>জনপ্ৰিয় <span class="gradient-text">পাঠ্যক্ৰম</span></h2>
+  </div>
+  <div class="courses-grid">
+    <a class="course-card" data-aos="zoom-in"><div class="thumb" style="--g:linear-gradient(135deg,#ff6b6b,#feca57)"></div>
+      <h3>Class 10 — গণিত</h3><p>SEBA পাঠ্যক্ৰমৰ সম্পূৰ্ণ সমাধান</p>
+      <div class="course-meta"><span>⭐ 4.9</span><span>120 পাঠ</span></div>
+    </a>
+    <a class="course-card" data-aos="zoom-in" data-aos-delay="80"><div class="thumb" style="--g:linear-gradient(135deg,#5f27cd,#48dbfb)"></div>
+      <h3>Class 12 — পদাৰ্থ বিজ্ঞান</h3><p>AHSEC ৰ বাবে বিশেষজ্ঞ পাঠ</p>
+      <div class="course-meta"><span>⭐ 4.8</span><span>95 পাঠ</span></div>
+    </a>
+    <a class="course-card" data-aos="zoom-in" data-aos-delay="160"><div class="thumb" style="--g:linear-gradient(135deg,#1dd1a1,#10ac84)"></div>
+      <h3>অসমীয়া ব্যাকৰণ</h3><p>মূল ব্যাকৰণৰ সম্পূৰ্ণ বিশ্লেষণ</p>
+      <div class="course-meta"><span>⭐ 5.0</span><span>60 পাঠ</span></div>
+    </a>
+    <a class="course-card" data-aos="zoom-in" data-aos-delay="240"><div class="thumb" style="--g:linear-gradient(135deg,#ee5a24,#ff9ff3)"></div>
+      <h3>APSC প্ৰস্তুতি</h3><p>প্ৰাৰম্ভিক ৰ পৰা মুখ্য পৰীক্ষালৈ</p>
+      <div class="course-meta"><span>⭐ 4.9</span><span>240 পাঠ</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- Leaderboard with chart -->
+<section class="section" id="leaderboard">
+  <div class="section-head" data-aos="fade-up">
+    <span class="eyebrow">লিডাৰবৰ্ড</span>
+    <h2>শীৰ্ষ <span class="gradient-text">শিক্ষাৰ্থী</span></h2>
+  </div>
+  <div class="leader-wrap">
+    <div class="leader-list" data-aos="fade-right">
+      <div class="leader"><span class="rank gold">1</span><span>Priyanka Das</span><b>9,820 XP</b></div>
+      <div class="leader"><span class="rank silver">2</span><span>Rituraj Kalita</span><b>9,540 XP</b></div>
+      <div class="leader"><span class="rank bronze">3</span><span>Anwesha Borah</span><b>9,210 XP</b></div>
+      <div class="leader"><span class="rank">4</span><span>Hirak Saikia</span><b>8,990 XP</b></div>
+      <div class="leader"><span class="rank">5</span><span>Mridul Gogoi</span><b>8,710 XP</b></div>
+    </div>
+    <div class="chart-wrap glass" data-aos="fade-left">
+      <h3>সাপ্তাহিক অধ্যয়ন সময় (ঘণ্টা)</h3>
+      <canvas id="studyChart"></canvas>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-inner glass" data-aos="zoom-in">
+    <h2>আজিৰে পৰা <span class="gradient-text">পঢ়া Hub</span> ত যোগ দিয়ক</h2>
+    <p>বিনামূলীয়া পঞ্জীয়ন। কোনো লুকাই থকা মাচুল নাই।</p>
+    <a href="pages/signup.html" class="btn btn-primary btn-lg">এতিয়াই পঞ্জীয়ন কৰক →</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="foot-grid">
+    <div>
+      <div class="logo"><span class="logo-mark">প</span><span class="logo-text">পঢ়া <em>Hub</em></span></div>
+      <p class="muted">অসমৰ ছাত্ৰ-ছাত্ৰীৰ বাবে নিৰ্মিত আধুনিক শিক্ষা মঞ্চ।</p>
+    </div>
+    <div>
+      <h4>লিংক</h4>
+      <a href="#courses">পাঠ্যক্ৰম</a><a href="#features">বৈশিষ্ট্য</a><a href="#leaderboard">লিডাৰবৰ্ড</a>
+    </div>
+    <div>
+      <h4>সহায়</h4>
+      <a href="#">যোগাযোগ</a><a href="#">প্ৰশ্নোত্তৰ</a><a href="#">গোপনীয়তা</a>
+    </div>
+    <div>
+      <h4>আমাক অনুসৰণ কৰক</h4>
+      <div class="socials"><a>𝕏</a><a>ƒ</a><a>◎</a><a>▶</a></div>
+    </div>
+  </div>
+  <div class="copyright">© 2026 পঢ়া Hub. সকলো অধিকাৰ সংৰক্ষিত।</div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/main.js"></script>
+</body>
+    </html>
+  
