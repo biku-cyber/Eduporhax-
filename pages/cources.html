@@ -1,51 +1,156 @@
+<!DOCTYPE html>
+<html lang="as">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<title>সকলো পাঠ্যক্ৰম — পঢ়া Hub</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+<link rel="stylesheet" href="../css/style.css" />
+
+</head>
+
+<body data-theme="dark">
+
+<header class="nav glass">
+
+  <a href="../index.html" class="logo">
+    <img
+      src="../assets/images/logo.png"
+      alt="পঢ়া Hub Logo"
+      class="site-logo"
+    >
+  </a>
+
+  <nav class="nav-links">
+    <a href="../index.html">ঘৰ</a>
+    <a href="courses.html">পাঠ্যক্ৰম</a>
+  </nav>
+
+  <div class="nav-actions">
+    <a href="login.html" class="btn btn-ghost">প্ৰৱেশ</a>
+    <a href="signup.html" class="btn btn-primary">পঞ্জীয়ন</a>
+  </div>
+
+</header>
+
+<section class="section" style="padding-top:160px">
+
+  <div class="section-head">
+    <span class="eyebrow">পাঠ্যক্ৰম</span>
+    <h2>সকলো <span class="gradient-text">পাঠ্যক্ৰম</span></h2>
+    <p>
+      অসমীয়া ভাষাত বিদ্যালয়, উচ্চ মাধ্যমিক আৰু
+      প্ৰতিযোগিতামূলক পৰীক্ষাৰ বাবে অধ্যয়ন সামগ্ৰী।
+    </p>
+  </div>
+
+  <div class="courses-grid" id="grid"></div>
+
+</section>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+
 const data = [
 
-{
-  title: "ষষ্ঠ শ্ৰেণী",
-  description: "অসমীয়া, ইংৰাজী, গণিত, বিজ্ঞান আৰু সমাজ বিজ্ঞান",
-  level: "Class 6"
-},
+  [
+    'ষষ্ঠ শ্ৰেণী',
+    'অসমীয়া, ইংৰাজী, গণিত আৰু বিজ্ঞান',
+    '#ff6b6b,#feca57'
+  ],
 
-{
-  title: "সপ্তম শ্ৰেণী",
-  description: "অসম চৰকাৰী পাঠ্যক্ৰম অনুসৰি সম্পূৰ্ণ অধ্যয়ন সামগ্ৰী",
-  level: "Class 7"
-},
+  [
+    'সপ্তম শ্ৰেণী',
+    'বিদ্যালয় পাঠ্যক্ৰম ভিত্তিক অধ্যয়ন',
+    '#5f27cd,#48dbfb'
+  ],
 
-{
-  title: "অষ্টম শ্ৰেণী",
-  description: "ভিডিঅ' পাঠ, নোট আৰু অনুশীলনী",
-  level: "Class 8"
-},
+  [
+    'অষ্টম শ্ৰেণী',
+    'পাঠ, অনুশীলনী আৰু মূল্যায়ন',
+    '#1dd1a1,#10ac84'
+  ],
 
-{
-  title: "নৱম শ্ৰেণী",
-  description: "SEBA ভিত্তিক সম্পূৰ্ণ পাঠ্যক্ৰম",
-  level: "Class 9"
-},
+  [
+    'নৱম শ্ৰেণী',
+    'SEBA ভিত্তিক সম্পূৰ্ণ অধ্যয়ন',
+    '#ee5a24,#ff9ff3'
+  ],
 
-{
-  title: "HSLC (Class 10)",
-  description: "SEBA পৰীক্ষাৰ বাবে বিশেষ প্ৰস্তুতি",
-  level: "HSLC"
-},
+  [
+    'HSLC (Class 10)',
+    'SEBA পৰীক্ষাৰ প্ৰস্তুতি',
+    '#7c5cff,#22d3ee'
+  ],
 
-{
-  title: "উচ্চ মাধ্যমিক বিজ্ঞান",
-  description: "পদাৰ্থ বিজ্ঞান, ৰসায়ন, জীৱ বিজ্ঞান আৰু গণিত",
-  level: "HS"
-},
+  [
+    'উচ্চ মাধ্যমিক বিজ্ঞান',
+    'পদাৰ্থ বিজ্ঞান, ৰসায়ন আৰু জীৱ বিজ্ঞান',
+    '#ff5cae,#feca57'
+  ],
 
-{
-  title: "উচ্চ মাধ্যমিক কলা",
-  description: "ৰাজনীতি বিজ্ঞান, ইতিহাস, শিক্ষা, অৰ্থনীতি",
-  level: "HS"
-},
+  [
+    'উচ্চ মাধ্যমিক কলা',
+    'ৰাজনীতি বিজ্ঞান, ইতিহাস আৰু শিক্ষা',
+    '#10ac84,#48dbfb'
+  ],
 
-{
-  title: "প্ৰতিযোগিতামূলক পৰীক্ষা",
-  description: "APSC, Assam Direct Recruitment, SSC, Railway",
-  level: "Competitive"
-}
+  [
+    'প্ৰতিযোগিতামূলক পৰীক্ষা',
+    'APSC, SSC আৰু Assam Recruitment',
+    '#ff9e00,#ff5cae'
+  ],
+
+  [
+    'ইংৰাজী শিক্ষা',
+    'Grammar, Writing আৰু Spoken English',
+    '#22d3ee,#7c5cff'
+  ]
 
 ];
+
+const grid = document.getElementById('grid');
+
+data.forEach(([title, desc, colors], index) => {
+
+  const card = document.createElement('a');
+
+  card.className = 'course-card';
+
+  card.setAttribute('data-aos', 'zoom-in');
+  card.setAttribute('data-aos-delay', index * 50);
+
+  card.innerHTML = `
+    <div
+      class="thumb"
+      style="--g:linear-gradient(135deg,${colors})">
+    </div>
+
+    <h3>${title}</h3>
+
+    <p>${desc}</p>
+
+    <div class="course-meta">
+      <span>উপলব্ধ</span>
+      <span>অসমীয়া মাধ্যম</span>
+    </div>
+  `;
+
+  grid.appendChild(card);
+
+});
+
+AOS.init({
+  duration: 700,
+  once: true
+});
+
+</script>
+
+</body>
+</html>
