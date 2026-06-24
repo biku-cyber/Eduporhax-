@@ -65,11 +65,12 @@
       <a href="pages/courses.html" class="btn btn-primary btn-lg">এতিয়াই আৰম্ভ কৰক →</a>
       <a href="#features" class="btn btn-ghost btn-lg">▶ ডেমো চাওক</a>
     </div>
+    <!-- প্ৰকৃত পৰিসংখ্যা সংযোগ কৰাৰ বাবে মডিফাই কৰা হৈছে -->
     <div class="hero-stats">
-      <div class="stat"><b data-count="25000">0</b><span>সক্ৰিয় ছাত্ৰ</span></div>
-      <div class="stat"><b data-count="500">0</b><span>ভিডিঅ' পাঠ</span></div>
-      <div class="stat"><b data-count="10000">0</b><span>কুইজ প্ৰশ্ন</span></div>
-      <div class="stat"><b data-count="98">0</b><span>% সন্তুষ্টি</span></div>
+      <div class="stat"><b data-count="0" id="stat-students">--</b><span>সক্ৰিয় ছাত্ৰ</span></div>
+      <div class="stat"><b data-count="0" id="stat-lessons">--</b><span>ভিডিঅ' পাঠ</span></div>
+      <div class="stat"><b data-count="0" id="stat-quizzes">--</b><span>কুইজ প্ৰশ্ন</span></div>
+      <div class="stat"><b data-count="100" id="stat-satisfaction">--</b><span>% সন্তুষ্টি</span></div>
     </div>
   </div>
   <div class="scroll-hint">scroll ↓</div>
@@ -81,7 +82,6 @@
     <span>📚 অসমীয়া</span><span>🧮 গণিত</span><span>🔬 বিজ্ঞান</span><span>🌍 সমাজ বিজ্ঞান</span>
     <span>💻 কম্পিউটাৰ</span><span>📐 জ্যামিতি</span><span>🧪 ৰসায়ন</span><span>⚛ পদাৰ্থ বিজ্ঞান</span>
     <span>🌱 জীৱ বিজ্ঞান</span><span>🗣 ইংৰাজী</span><span>🕉 সংস্কৃত</span><span>🎯 SEBA</span>
-    <span>📚 অসমীয়া</span><span>🧮 গণিত</span><span>🔬 বিজ্ঞান</span><span>🌍 সমাজ বিজ্ঞান</span>
   </div>
 </div>
 
@@ -103,7 +103,7 @@
     </article>
     <article class="feature-card" data-aos="fade-up" data-aos-delay="160">
       <div class="icon">📊</div><h3>প্ৰগতি ট্ৰেকিং</h3>
-      <p>সুন্দৰ চাৰ্ট আৰু এনালিটিক্সৰ সৈতে নিজৰ উন্নতি চাওক।</p>
+      <p>সুন্দৰ চাৰ্ট আৰু এনালিটিক্সৰ সৈته নিজৰ উন্নতি চাওক।</p>
     </article>
     <article class="feature-card" data-aos="fade-up" data-aos-delay="240">
       <div class="icon">🏆</div><h3>লাইভ লিডাৰবৰ্ড</h3>
@@ -126,22 +126,23 @@
     <span class="eyebrow">পাঠ্যক্ৰম</span>
     <h2>জনপ্ৰিয় <span class="gradient-text">পাঠ্যক্ৰম</span></h2>
   </div>
+  <!-- ডেমো নম্বৰসমূহ গুচাই "নতুন" বুলি যোগ কৰা হৈছে (পিছত ডাটাবেচৰ পৰা আপডেট কৰিব পাৰিব) -->
   <div class="courses-grid">
     <a class="course-card" data-aos="zoom-in"><div class="thumb" style="--g:linear-gradient(135deg,#ff6b6b,#feca57)"></div>
       <h3>Class 10 — গণিত</h3><p>SEBA পাঠ্যক্ৰমৰ সম্পূৰ্ণ সমাধান</p>
-      <div class="course-meta"><span>⭐ 4.9</span><span>120 পাঠ</span></div>
+      <div class="course-meta"><span>⭐ ৫.০</span><span>নতুন পাঠ্যক্ৰম</span></div>
     </a>
     <a class="course-card" data-aos="zoom-in" data-aos-delay="80"><div class="thumb" style="--g:linear-gradient(135deg,#5f27cd,#48dbfb)"></div>
       <h3>Class 12 — পদাৰ্থ বিজ্ঞান</h3><p>AHSEC ৰ বাবে বিশেষজ্ঞ পাঠ</p>
-      <div class="course-meta"><span>⭐ 4.8</span><span>95 পাঠ</span></div>
+      <div class="course-meta"><span>⭐ ৫.০</span><span>নতুন পাঠ্যক্ৰম</span></div>
     </a>
     <a class="course-card" data-aos="zoom-in" data-aos-delay="160"><div class="thumb" style="--g:linear-gradient(135deg,#1dd1a1,#10ac84)"></div>
       <h3>অসমীয়া ব্যাকৰণ</h3><p>মূল ব্যাকৰণৰ সম্পূৰ্ণ বিশ্লেষণ</p>
-      <div class="course-meta"><span>⭐ 5.0</span><span>60 পাঠ</span></div>
+      <div class="course-meta"><span>⭐ ৫.০</span><span>সম্পূৰ্ণ গাইড</span></div>
     </a>
     <a class="course-card" data-aos="zoom-in" data-aos-delay="240"><div class="thumb" style="--g:linear-gradient(135deg,#ee5a24,#ff9ff3)"></div>
       <h3>APSC প্ৰস্তুতি</h3><p>প্ৰাৰম্ভিক ৰ পৰা মুখ্য পৰীক্ষালৈ</p>
-      <div class="course-meta"><span>⭐ 4.9</span><span>240 পাঠ</span></div>
+      <div class="course-meta"><span>⭐ ৫.০</span><span>নতুন বেচ</span></div>
     </a>
   </div>
 </section>
@@ -152,13 +153,12 @@
     <span class="eyebrow">লিডাৰবৰ্ড</span>
     <h2>শীৰ্ষ <span class="gradient-text">শিক্ষাৰ্থী</span></h2>
   </div>
+  <!-- লিডাৰবৰ্ডৰ সাময়িক খালী তালিকা (Database যোগ কৰিলে অটোমেটিক সলনি হ’ব) -->
   <div class="leader-wrap">
     <div class="leader-list" data-aos="fade-right">
-      <div class="leader"><span class="rank gold">1</span><span>Priyanka Das</span><b>9,820 XP</b></div>
-      <div class="leader"><span class="rank silver">2</span><span>Rituraj Kalita</span><b>9,540 XP</b></div>
-      <div class="leader"><span class="rank bronze">3</span><span>Anwesha Borah</span><b>9,210 XP</b></div>
-      <div class="leader"><span class="rank">4</span><span>Hirak Saikia</span><b>8,990 XP</b></div>
-      <div class="leader"><span class="rank">5</span><span>Mridul Gogoi</span><b>8,710 XP</b></div>
+      <div class="leader"><span class="rank gold">১</span><span>যোগ হ’বলগীয়া ছাত্ৰ</span><b>-- XP</b></div>
+      <div class="leader"><span class="rank silver">২</span><span>যোগ হ’বলগীয়া ছাত্ৰ</span><b>-- XP</b></div>
+      <div class="leader"><span class="rank bronze">৩</span><span>যোগ হ’বলগীয়া ছাত্ৰ</span><b>-- XP</b></div>
     </div>
     <div class="chart-wrap glass" data-aos="fade-left">
       <h3>সাপ্তাহিক অধ্যয়ন সময় (ঘণ্টা)</h3>
@@ -205,5 +205,4 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="js/main.js"></script>
 </body>
-    </html>
-  
+</html>
