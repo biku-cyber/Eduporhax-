@@ -1,27 +1,75 @@
-<!DOCTYPE html>
+<!<!DOCTYPE html>
 <html lang="as">
 <head>
-<meta charset="UTF-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>প্ৰৱেশ — পঢ়া Hub</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="../css/style.css" />
 </head>
+
 <body data-theme="dark">
+
 <div class="hero-bg" style="position:fixed;inset:0;z-index:0">
-  <div class="orb orb-1"></div><div class="orb orb-2"></div>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
 </div>
+
 <div class="auth-wrap">
+
   <div class="auth-card glass">
-    <a href="../index.html" class="logo" style="margin-bottom:24px"><span class="logo-mark">প</span><span class="logo-text">পঢ়া <em>Hub</em></span></a>
+
+    <a href="../index.html" class="logo" style="margin-bottom:24px">
+      <span class="logo-mark">প</span>
+      <span class="logo-text">পঢ়া <em>Hub</em></span>
+    </a>
+
     <h1>পুনৰ স্বাগতম 👋</h1>
     <p class="sub">আপোনাৰ একাউণ্টত প্ৰৱেশ কৰক</p>
-    <form onsubmit="event.preventDefault();alert('ডেমো — ব্যাকএণ্ড সংযোগ কৰক')">
-      <div class="field"><label>ইমেইল</label><input type="email" required placeholder="apuni@example.com"></div>
-      <div class="field"><label>পাছৱৰ্ড</label><input type="password" required placeholder="••••••••"></div>
-      <button class="btn btn-primary" style="width:100%" type="submit">প্ৰৱেশ কৰক</button>
+
+    <form id="loginForm">
+
+      <div class="field">
+        <label>ইমেইল</label>
+        <input
+          id="email"
+          type="email"
+          required
+          placeholder="apuni@example.com"
+        >
+      </div>
+
+      <div class="field">
+        <label>পাছৱৰ্ড</label>
+        <input
+          id="password"
+          type="password"
+          required
+          placeholder="••••••••"
+        >
+      </div>
+
+      <button
+        class="btn btn-primary"
+        style="width:100%"
+        type="submit">
+        প্ৰৱেশ কৰক
+      </button>
+
     </form>
-    <div class="auth-foot">একাউণ্ট নাই? <a href="signup.html">পঞ্জীয়ন কৰক</a></div>
+
+    <div class="auth-foot">
+      একাউণ্ট নাই?
+      <a href="signup.html">পঞ্জীয়ন কৰক</a>
+    </div>
+
   </div>
+
 </div>
+
+<script type="module" src="../js/login.js"></script>
+
 </body>
 </html>
